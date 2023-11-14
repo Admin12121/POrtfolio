@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  input, button, textarea {
+    font-family: inherit;
+    -webkit-appearance: none;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  
+  body {
+    background: #181818;
+    font-family: "Montserrat";
+    overflow: hidden;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: inherit;
+    font-weight: normal;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-appearance: none;
+    outline: none;
+    border-radius: 0;
+    background: none;
+    border: none;
+  }
+  
+  main {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+  }
+  
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
