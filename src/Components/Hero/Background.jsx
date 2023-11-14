@@ -1,4 +1,9 @@
-const tools = {
+import React from "react";
+
+import "./Background.scss"
+
+const Background = () => {
+  const tools = {
     drawPath(ctx, fn) {
       ctx.save();
       ctx.beginPath();
@@ -37,17 +42,18 @@ const tools = {
     main: null };
   
   
-  const mouse = {
-    x: 0,
-    y: 0,
-    coords: {
-      x: 0,
-      y: 0 },
+   const mouse = {
+     x: 0,
+     y: 0,
+     coords: {
+       x: 0,
+       y: 0 },
   
-    down: {
-      state: false,
-      x: 0,
-      y: 0 } };
+     down: {
+       state: false,
+       x: 0,
+       y: 0 } 
+      };
   
   
   
@@ -64,7 +70,6 @@ const tools = {
     plane: '#plane-canvas',
     main: '#main-canvas',
     textNodes: '[data-js=text]',
-    social: '#social',
     mouse: '#mouse' };
   
   
@@ -104,20 +109,12 @@ const tools = {
       this.canvasInit();
       this.loop();
       this.initCheckingInterval();
-      this.splitText();
     }
-    splitText() {
-      ui.textNodes.forEach(el => {
-        const value = el.innerText;
-        el.innerHTML = value.split('').reduce((acc, cur) => {
-          return acc + `<span class="letter">${cur}</span>`;
-        }, '');
-      });
-    }
+
     animateText() {
       const callback = () => {
-        // ui.social.classList.add('active');
-        // ui.mouse.classList.add('active');
+        ui.social.classList.add('active');
+        ui.mouse.classList.add('active');
       };
       ui.textNodes.forEach((el, elIndex) => {
         el.classList.add('active');
@@ -203,17 +200,8 @@ const tools = {
       ui.plane.height = doc.height;
       ui.plane.width = doc.width;
       this.updatePlane();
-      this.updateTextConfig();
       if (state.planeIsDrawn) this.getTextPixels();
       state.needRedraw = true;
-    }
-    updateTextConfig() {
-      // const state = this.state;
-      // state.text = {
-      //   baseLine: 'top',
-      //   font: '800 170px Montserrat',
-      //   value: 'Vicky' };
-  
     }
     initCheckingInterval() {
       const state = this.state;
@@ -763,4 +751,19 @@ const tools = {
   
       });
   
-    }}
+    }} 
+  window.addEventListener('load', () => {
+    window.app = new App();
+  });
+  
+  return (
+    <>
+    <main id="myElement">
+      <canvas className="plane-canvas" id="plane-canvas"></canvas>
+      <canvas className="main-canvas" id="main-canvas"></canvas>
+    </main>
+    </>
+  );
+};
+
+export default Background;

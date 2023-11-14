@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import './App.css'
-import Background from './Elements/Background'
+import './App.scss'
+import Background from './Components/Hero/Background'
 
 function App() {
   const [count, setCount] = useState(0)
