@@ -1,13 +1,16 @@
-import { useState } from 'react'
+
 import './App.scss'
 import Background from './Components/Hero/Background'
+import Navbar from './Components/Navbar/Navbar'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
+    <section>
+      <Navbar/>
       <Background/>
+    </section>
     </>
   )
 }

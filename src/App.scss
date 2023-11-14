@@ -1,36 +1,71 @@
 * {
-    box-sizing: border-box;
-  }
-  
-  input, button, textarea {
-    font-family: inherit;
-    -webkit-appearance: none;
-  }
-  
-  html, body {
-    height: 100%;
-  }
-  
-  body {
-    background: #181818;
-    font-family: "Montserrat";
-    overflow: hidden;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: inherit;
-    font-weight: normal;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    -webkit-appearance: none;
-    outline: none;
-    border-radius: 0;
-    background: none;
-    border: none;
-  }
-  
+  box-sizing: border-box;
+}
+
+input, button, textarea {
+  font-family: inherit;
+  -webkit-appearance: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+:root {
+  --themeC: #71FCAA;
+  --bgGrey: #2D2E32;
+  --fullDarkGrey: #191A1D;
+  --DarkGrey: #25262A;
+  --greyLight: #999999;
+  --wt: #ffffff;
+  --black: #1a1a1a;
+}
+body {
+  background: var(--DarkGrey);
+  font-family: "Montserrat";
+  overflow: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: inherit;
+  font-weight: normal;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-appearance: none;
+  outline: none;
+  border-radius: 0;
+  background: none;
+  border: none;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.plate {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 0;
+  text-align: center;
+  color: white;
+  letter-spacing: 4px;
+  font-size: 0.6em;
+  line-height: 2.5;
+}

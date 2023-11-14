@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'dx-slight-black-slim';
+    src: url('../Source/Dx-Slight-Black-Slim.otf') format('opentype');
+}
+@font-face {
+    font-family: 'dx-slight-medium-ultra';
+    src: url('../Source/Dx-Slight-SemBd-Slim.otf') format('opentype');
+    
+}
+
+.Navbar {
+    position: relative;
+    z-index: 9;
+    font-size: 50px;
+    color: white;
+    letter-spacing: 2px;
+    height: 100px;
+    
+    .wrapper {
+        font-family: 'dx-slight-black-slim';
+        max-width: 1366px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 100%;
+        letter-spacing: 3px;
+
+        button{
+            font-family: 'dx-slight-medium-ultra';
+            font-weight: bold;
+            background-color: white;
+            font-size: 20px;
+            padding: 5px;
+            width: 120px;
+            letter-spacing: 0.7px;
+
+            color: --DarkGrey;
+            span{
+                text-align: center;
+            }
+        }
+    }
+}
