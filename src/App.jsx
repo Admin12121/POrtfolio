@@ -10,8 +10,10 @@ function App() {
     <>
     <section>
       <Navbar/>
-      <Background/>
       <HeroSection/>
+      <Background/>
+    </section>
+    <section>
     </section>
     </>
   )

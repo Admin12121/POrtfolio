@@ -16,7 +16,7 @@ const Bar = () => {
           }
       },
       close:{
-          clipPath:"circle(120px at 50% -20%)",
+          clipPath:"circle(10px at 50% -20%)",
           transition:{
               delay:0.5,
               type:"spring",
@@ -28,7 +28,6 @@ const Bar = () => {
   return (
     <motion.div className='bar' animate={open ? "open" : "close"} >
       <motion.div className="bg" variants={variants}  >
-
         <Links/>
       </motion.div>
        <ToggleButton setOpen={SetOpen}/> 

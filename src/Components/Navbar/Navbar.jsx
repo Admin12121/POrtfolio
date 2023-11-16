@@ -10,13 +10,13 @@ const Navbar = () => {
   return (
     <>
       <div>
-        <div className="Navbar">
+        <motion.div className="Navbar" initial={{y:-100}} animate={{y:0}} transition={{type:"spring",stiffness: 200,duration:1, delay:1}}> 
           <div className="wrapper">
             <span>Vicky</span>
             <Bar/>
             <button>CONTACT US ↗</button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );

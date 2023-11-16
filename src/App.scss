@@ -1,6 +1,4 @@
-* {
-  box-sizing: border-box;
-}
+
 
 input, button, textarea {
   font-family: inherit;
@@ -9,6 +7,8 @@ input, button, textarea {
 
 html, body {
   height: 100%;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 
 :root {
@@ -23,7 +23,7 @@ html, body {
 body {
   background: var(--DarkGrey);
   font-family: "Montserrat";
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 * {
@@ -68,4 +68,10 @@ canvas {
   letter-spacing: 4px;
   font-size: 0.6em;
   line-height: 2.5;
+}
+
+section{
+  height: 100vh;
+  overflow: hidden;
+  scroll-snap-align: center;
 }

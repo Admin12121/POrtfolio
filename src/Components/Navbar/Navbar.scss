@@ -11,7 +11,7 @@
 .Navbar {
     position: relative;
     z-index: 9;
-    font-size: 50px;
+    font-size: 3.5vw;
     color: #dcdcdc;
     letter-spacing: 2px;
     height: 100px;
@@ -26,13 +26,17 @@
         height: 100%;
         letter-spacing: 3px;
 
+        span{
+            width: 10vw;
+        }
+
         button{
             font-family: 'dx-slight-medium-ultra';
             font-weight: bold;
             background-color: #dcdcdc;
-            font-size: 20px;
+            font-size: 1.6vw;
             padding: 5px;
-            width: 120px;
+            width: 10vw;
             letter-spacing: 0.7px;
 
             color: --DarkGrey;

@@ -1,14 +1,25 @@
 // ... (your existing imports)
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useRef } from "react";
 import "./Hero.scss";
+import {animate,useScroll,useTransform,  motion} from "framer-motion"
 import Img from '../Source/portfolio.png'
 
 const HeroSection = () => {
-  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const letters = "ABCDEFGHKNOPQRSUVXY";
   const [text, setText] = useState("CREATIVE DEVELOPER");
   const [intervalId, setIntervalId] = useState(null);
   const [updatedLength, setUpdatedLength] = useState(0);
+
+  const ref =useRef()
+
+  const {scrollYProgress} = useScroll({
+    target: ref,
+    offset:["start start", "end start"]
+  });
+
+  const ytext = useTransform(scrollYProgress, [0,1] , ["0%", "200%"])
+  const yBg = useTransform(scrollYProgress, [0,1] , ["0%", "100%"])
 
   useEffect(() => {
     return () => {
@@ -30,7 +41,7 @@ const HeroSection = () => {
               return text[index];
             }
 
-            return letters[Math.floor(Math.random() * 26)];
+            return letters[Math.floor(Math.random() * 15)];
           })
           .join("")
       );
@@ -46,35 +57,43 @@ const HeroSection = () => {
     setIntervalId(newIntervalId);
   };
 
+  const [timt,setTimt] = useState(0)
+
   useEffect(() => {
     const divElement = document.getElementById("id");
+  
+    
     if (divElement) {
-      divElement.click();
+      setTimeout(() => {
+        divElement.click();
+        setTimt(prevTimt => prevTimt +2);
+      }, 2000); // 2000 milliseconds = 2 seconds
     }
   }, []);
-
+  
   return (
     <>
-      <div className="ui-wrapper">
-        <div className="Header">
-          <h1 id="id" onClick={handleMouseOver}>
+      <div className="ui-wrapper" ref={ref}>
+        <div className="Header" >
+          <motion.h1 id="id" style={{y:ytext}} onClick={handleMouseOver}>
             {text.split("").map((letter, index) => (
               <span
                 key={index}
                 style={{
                   color:
-                    index < updatedLength ? "#dcdcdc" : "rgba(255, 255, 255, 0)",
+                    index < updatedLength + timt ? "#dcdcdc" : "rgba(255, 255, 255, 0)",
                 }}
               >
                 {letter}
               </span>
             ))}
-          </h1>
+          </motion.h1>
         </div>
         <div className="box">
           <div className="main">
-        <div className="portfolio_box"></div>
-          <img src={Img} alt="" /> 
+        <motion.div style={{y:yBg}} className="portfolio_box" initial={{opacity:0, scale:0.5}} animate={{opacity:1 , scale: 1}} transition={{ stiffness: 100,type:"spring", delay: 2}}>
+        </motion.div>
+          {/* <motion.img src={Img} alt="" initial={{opacity:0, scale:.5 ,y:100}} animate={{opacity:1 , scale: 1, y:0}} transition={{type:"spring", stiffness: 100,duration: 1, delay:3}} />  */}
           </div>
         <div className="text">
 

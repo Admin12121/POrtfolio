@@ -14,50 +14,43 @@
     justify-content: center;
     letter-spacing: 3px;
     flex-direction: column;
-    gap: 70px;
 
     .Header{
         position: relative;
         z-index: -99;
+        // overflow: hidden;
+        display: flex;
+        justify-content: center;
 
 
         h1{
-            font-family: dx-slight-black-slim;
-            font-size: 160px;
+            font-family: dx-slight-black-slim, monospace;
+            font-size: 10vw;
             position: relative;
-            top: -40px;
         }
     }
     .box{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        width: 100%;
-        margin: 0 0 0 10%;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: Center;
+         width: 100%;
+
         img{
-            height: 330px;
-        width: 300px;
+            position: absolute;
+            top: 0;
+            height: 600px;
+
         }
         .portfolio_box{
-            height: 330px;
-            width: 300px;
-            -webkit-transform: skew(-15deg);
-               -moz-transform: skew(20deg);
-                 -o-transform: skew(20deg);
-                background-color: rgba(29, 29, 29, 0.67);        
-            &:before{
-                content: "";
-                display: block;
-                margin: -30px 0 0 -30px;
-                left: 0;
-                height: 330px;
-                width: 300px;
-                -webkit-transform: skew(0deg);
-                -moz-transform: skew(20deg);
-                -o-transform: skew(20deg);
-            background-color: #b3b3b3;
-            }
+            width: 500px;
+            box-shadow: 1px 1px 100px rgba(0, 255, 255, 0.544);
+            background-color: rgba(0, 255, 255, 0.544);
+            height: 500px;
+            border-radius: 50%;
+            position: relative;
+            top: -120px;
+            z-index: -100;
     
         }
         .text{
