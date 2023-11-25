@@ -14,7 +14,7 @@ const Navbar = () => {
           <div className="wrapper">
             <span>Vicky</span>
             <Bar/>
-            <button>CONTACT US ↗</button>
+            <motion.button  whileTap={{scale:0.93}} transition={{type:"spring",stiffness: 300}}>CONTACT US ↗</motion.button>
           </div>
         </motion.div>
       </div>

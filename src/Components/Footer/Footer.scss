@@ -1,0 +1,78 @@
+.footer_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+    width: 98%;
+    background-color: #dcdcdc;
+    position: relative;
+    gap: 5px;
+    bottom: -20%;
+    .top{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .Main-box-letter{
+            font-family: 'dx-slight-medium-ultra' ;
+            font-size: 10vw;
+
+        }
+        .contact_us{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px;
+            border-bottom: 1px solid rgba(103, 100, 103, 0.8);
+           span{
+            font-family: 'dx-slight-medium-ultra';
+            font-size: 1.9vw;
+            letter-spacing: 1px;
+           }
+
+            button{
+                cursor: pointer;
+                font-family: 'dx-slight-medium-ultra';
+                font-weight: bold;
+                background-color: #25262ab3;
+                color: #fff;
+                font-size: 1.6vw;
+                padding: 5px;
+                width: 10vw;
+                letter-spacing: 0.7px;    
+                color: --DarkGrey;
+                span{
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 80px;
+        width: 80%;
+        .logo{
+            font-family: dx-slight-medium-ultra;
+            font-size: 2vw;
+        }
+        .links_ui{
+            font-family: dx-slight-medium-ultra;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+
+            a{
+                text-decoration: none;
+                color: #25262ad2;
+                font-size: 2vw;
+            }
+        }
+    }
+}

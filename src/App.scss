@@ -75,3 +75,17 @@ section{
   overflow: hidden;
   scroll-snap-align: center;
 }
+
+#id-wrapper{
+  --line: hsl(0 0% 95% / 0.25);
+  background:
+  linear-gradient(90deg, var(--line) 1px, transparent 1px 10vmin) 0 -5vmin/5vmin 10vmin, linear-gradient(var(--line) 1px, transparent 1px 10vmin) 0 -5vmin/12vmin 5vmin;
+	-webkit-mask: linear-gradient(-15deg, transparent 30%, white);
+	        mask: linear-gradient(-15deg, transparent 30%, white);
+}
+#footer{
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
