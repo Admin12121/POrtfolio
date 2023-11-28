@@ -773,8 +773,8 @@ const Background = () => {
   return (
     <>
       <main>
-        <canvas class="plane-canvas" id="plane-canvas"></canvas>
-        <canvas class="main-canvas" id="main-canvas"></canvas>
+        <canvas className="plane-canvas" id="plane-canvas"></canvas>
+        <canvas className="main-canvas" id="main-canvas"></canvas>
       </main>
     </>
   );

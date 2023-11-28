@@ -72,7 +72,7 @@ canvas {
 
 section{
   height: 100vh;
-  overflow: hidden;
+  // overflow: hidden;
   scroll-snap-align: center;
 }
 
@@ -84,8 +84,9 @@ section{
 	        mask: linear-gradient(-15deg, transparent 30%, white);
 }
 #footer{
-  height: 80vh;
+  height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }

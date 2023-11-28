@@ -12,7 +12,7 @@ const Navbar = () => {
       <div>
         <motion.div className="Navbar" initial={{y:-100}} animate={{y:0}} transition={{type:"spring",stiffness: 200,duration:1, delay:1}}> 
           <div className="wrapper">
-            <span>Vicky</span>
+            <span>Vicky.</span>
             <Bar/>
             <motion.button  whileTap={{scale:0.93}} transition={{type:"spring",stiffness: 300}}>CONTACT US ↗</motion.button>
           </div>

@@ -3,7 +3,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Hero.scss";
 import { animate, useScroll, useTransform, motion } from "framer-motion";
-import Img from "../Source/portfolio.png";
+import Bat from "./Bat";
+// import Img from "../Source/portfolio.png";
 
 const HeroSection = () => {
   const letters = "ABCDEFGHKNOPQRSUVXY";
@@ -98,8 +99,10 @@ const HeroSection = () => {
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ stiffness: 100, type: "spring", delay: 2 }}
-            ></motion.div>
-            {/* <motion.img src={Img} alt="" initial={{opacity:0, scale:.5 ,y:100}} animate={{opacity:1 , scale: 1, y:0}} transition={{type:"spring", stiffness: 100,duration: 1, delay:3}} />  */}
+            >
+
+            <Bat />
+            </motion.div>
             <div className="text">
               
             </div>

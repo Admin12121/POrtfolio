@@ -3,29 +3,32 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 60%;
+    height: 90%;
     width: 98%;
+    color: #25262ad2;
     background-color: #dcdcdc;
     position: relative;
-    gap: 5px;
-    bottom: -20%;
+    gap: 10px;
+    // bottom: -10%;
     .top{
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        gap: 10px;
 
         .Main-box-letter{
             font-family: 'dx-slight-medium-ultra' ;
             font-size: 10vw;
+            color: #25262ad2;
 
         }
         .contact_us{
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 20px;
-            padding: 10px;
+            gap: 40px;
+            padding: 20px;
             border-bottom: 1px solid rgba(103, 100, 103, 0.8);
            span{
             font-family: 'dx-slight-medium-ultra';
@@ -58,11 +61,12 @@
         gap: 80px;
         width: 80%;
         .logo{
-            font-family: dx-slight-medium-ultra;
-            font-size: 2vw;
+            font-family: "dx-slight-black-slim";
+            font-size: 2.4vw;
+            letter-spacing: .3vw;
         }
         .links_ui{
-            font-family: dx-slight-medium-ultra;
+            font-family: 'dx-slight-medium-ultra';
             display: flex;
             align-items: center;
             justify-content: center;
@@ -74,5 +78,26 @@
                 font-size: 2vw;
             }
         }
+        .social-icons{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2vw;
+            gap: 1vw;
+            cursor: pointer;
+            color: #25262ad2;
+
+            
+        }
     }
+}
+.right_reserved{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+    font-family: 'dx-slight-medium-ultra';
+    color: #dcdcdc;
+    letter-spacing: .5px;
+    font-size: 1.5vw;
 }
