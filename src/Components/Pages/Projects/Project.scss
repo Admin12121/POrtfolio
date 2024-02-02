@@ -1,0 +1,107 @@
+  .project {
+    
+    padding: 1rem;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    .project_wrapper {
+        max-width: 80%;
+        width: 100%;
+        .project_card_wrapper {
+            display: flex;
+            position: relative;
+            height: 150px;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid;
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 300ms;
+            transition-duration: 500ms;
+            
+            &:hover{
+                color: #fff;
+                filter: none;
+            }
+            .project_box_span_wrapper {
+                display: block;
+                position: relative;
+                z-index: 10;
+                font-size: 2.25rem;
+                line-height: 2.5rem;
+                font-weight: 700;
+                // padding-left: 1rem;
+                transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                transition-duration: 300ms;
+                transition-duration: 500ms;
+
+                .inline-block {
+                    display: inline-block;
+                }
+
+                @media (min-width: 768px) {
+                    font-size: 3.75rem;
+                    line-height: 1;
+                }
+
+
+
+
+            }
+            .project_box_header {
+                display: block;
+                position: relative;
+                z-index: 10;
+                margin-top: 0.5rem;
+                font-size: 1rem;
+                line-height: 1.5rem;
+                transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                transition-duration: 300ms;
+                transition-duration: 500ms;
+            }
+            .project_image_wrapper {
+                object-fit: cover;
+                position: absolute;
+                z-index: 0;
+                border-radius: 0.5rem;
+                width: 8rem;
+                height: 6rem;
+
+                @media (min-width: 768px) {
+                    width: 16rem;
+                    height: 12rem;
+                }
+
+            }
+
+            
+            .project_icon_wrapper {
+                position: relative;
+                z-index: 10;
+                padding: 1rem;
+
+                .project_icon {
+                    font-size: 3rem;
+                    line-height: 1;
+                }
+            }
+
+            @media (min-width: 768px) {
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+            }
+
+        }
+    }
+
+    @media (min-width: 768px) {
+        padding: 2rem;
+    }
+    @media (max-width: 768px) {
+        overflow: hidden;
+    }
+}

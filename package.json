@@ -10,17 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-spring/three": "^9.7.3",
     "@react-three/drei": "^9.93.0",
     "@react-three/fiber": "^8.15.13",
-    "classname": "^0.0.0",
     "framer-motion": "^10.16.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icon": "^1.0.0",
     "react-icons": "^4.12.0",
     "react-intersection-observer": "^9.5.3",
+    "react-router-dom": "^6.22.0",
     "sass": "^1.69.5",
-    "scss": "^0.2.4",
     "three": "^0.160.0"
   },
   "devDependencies": {
