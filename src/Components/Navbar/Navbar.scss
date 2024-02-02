@@ -18,15 +18,16 @@
     
     .wrapper {
         font-family: 'dx-slight-black-slim';
-        max-width: 1366px;
         margin: auto;
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
         height: 100%;
         letter-spacing: 3px;
+        padding: 0 10%;
 
         span{
+            position: relative;
             width: 10vw;
         }
 

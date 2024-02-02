@@ -19,10 +19,11 @@
   opacity: 1;
   width: 1px;
   height: 1px;
-  transform: scale(8);
-  position: relative;
-  left: 15px;
-  /* filter: invert(1); */
+  transform: scale(1);
+  position: absolute;
+  top:10px;
+  left: -65px;
+  filter: invert(1);
   -webkit-animation: 0.4s bat steps(1) infinite;
   animation: 0.4s bat steps(1) infinite;
 }

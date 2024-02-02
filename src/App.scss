@@ -9,6 +9,11 @@ html, body {
   height: 100%;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
+  // overflow-x: hidden;
+}
+body{
+   overflow-x: hidden;
+  
 }
 
 :root {
@@ -16,6 +21,7 @@ html, body {
   --bgGrey: #2D2E32;
   --fullDarkGrey: #191A1D;
   --DarkGrey: #25262A;
+  --Blackhole: #030015;
   --greyLight: #999999;
   --wt: #ffffff;
   --black: #1a1a1a;
@@ -24,6 +30,29 @@ body {
   background: var(--DarkGrey);
   font-family: "Montserrat";
   // overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  background: #dcdcdc;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+  background: #71FCAA;
 }
 
 * {
@@ -51,11 +80,11 @@ main {
   width: 100%;
 }
 
-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+ .plane-canvas , .main-canvas {
+   position: absolute;
+   top: 0;
+   left: 0;
+ }
 
 .plate {
   position: absolute;
@@ -73,20 +102,21 @@ canvas {
 section{
   height: 100vh;
   // overflow: hidden;
-  scroll-snap-align: center;
+  //  scroll-snap-align: center;
 }
 
-#id-wrapper{
-  --line: hsl(0 0% 95% / 0.25);
-  background:
-  linear-gradient(90deg, var(--line) 1px, transparent 1px 10vmin) 0 -5vmin/5vmin 10vmin, linear-gradient(var(--line) 1px, transparent 1px 10vmin) 0 -5vmin/12vmin 5vmin;
-	-webkit-mask: linear-gradient(-15deg, transparent 30%, white);
-	        mask: linear-gradient(-15deg, transparent 30%, white);
-}
+
 #footer{
   height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+#About-wrapper{
+overflow: hidden;
+}
+
+#back{
+background: linear-gradient(to bottom,var(--DarkGrey), #030015); 
 }

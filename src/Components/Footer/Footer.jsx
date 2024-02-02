@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react'
 import './Footer.scss'
-import {FaFacebook,FaTwitter,FaLinkedin} from "react-icons/fa";
+import {FaGithub,FaFacebook,FaTwitter,FaLinkedin} from "react-icons/fa";
 import {AiFillInstagram} from "react-icons/ai"
 // import { useInView } from 'react-intersection-observer';
 
@@ -12,11 +12,11 @@ initial:{
   opacity:0
 },
 animate:{
-y:0,
+y: 0,
 opacity:1,
 transition:{
   type:"spring",
-  stiffness:50,
+  stiffness:100,
   duration:1,
   delay:.4
 }
@@ -90,7 +90,7 @@ const Footer = () => {
         clearInterval(newIntervalId);
       }
 
-      iteration += 1 / 3;
+      iteration += 1 / 1.8;
       setUpdatedLength(Math.floor(iteration));
     }, 30);
 
@@ -116,7 +116,7 @@ const Footer = () => {
 
   return (
     <>
-      <motion.div className="footer_wrapper" variants={variants} initial="initial"ref={ref} animate={isInView && "animate"}>
+      <motion.div className="footer_wrapper" variants={variants} initial="initial" ref={ref} animate={isInView && "animate"}>
         <div className="top" ctr={ref}>
         <motion.h1 id="idrt" className='Main-box-letter' onClick={handleMouseOver}>
             {text.split("").map((letter, index) => (
@@ -150,10 +150,18 @@ const Footer = () => {
 
 
             <div className="social-icons">
+            <a href="https://www.facebook.com/vicky.tajpuriya.75">
             <FaFacebook/>
+            </a>
+            <a href="https://www.instagram.com/vicky__taj">
               <AiFillInstagram/>
-              <FaTwitter/>
+            </a>
+            <a href="https://github.com/Admin12121">
+              <FaGithub/>
+            </a>
+            <a href="https://www.linkedin.com/in/vicky-taj-7903b5281/">
               <FaLinkedin/>
+            </a>
             </div>
 
         </motion.div>

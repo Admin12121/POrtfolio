@@ -1,31 +1,23 @@
-// ... (your existing imports)
-
 import React, { useState, useEffect, useRef } from "react";
-import "./Hero.scss";
-import { animate, useScroll, useTransform, motion } from "framer-motion";
-import Bat from "./Bat";
-// import Img from "../Source/portfolio.png";
+import { motion } from "framer-motion";
 
+import "./Hero.scss";
+import Buddha from "./Desktop/Buddha";
+import Model from './Three/Model'
 const HeroSection = () => {
   const letters = "ABCDEFGHKNOPQRSUVXY";
-  const [text, setText] = useState("CREATIVE DEVELOPER");
+  const [text, setText] = useState("CREATIVE WEB DEVELOPER");
   const [intervalId, setIntervalId] = useState(null);
   const [updatedLength, setUpdatedLength] = useState(0);
-
+  const [loadDesktop, setLoadDesktop] = useState(false);
   const ref = useRef();
 
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-
-  const ytext = useTransform(scrollYProgress, [0, 1], ["0%", "200%"]);
-  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   useEffect(() => {
-    return () => {
-      clearInterval(intervalId);
-    };
+    if (intervalId) {
+      const intervalIdCopy = intervalId; // Create a copy to capture the current value
+      return () => clearInterval(intervalIdCopy); // Clear the interval on component unmount
+    }
   }, [intervalId]);
 
   const handleMouseOver = () => {
@@ -49,9 +41,10 @@ const HeroSection = () => {
 
       if (iteration >= text.length) {
         clearInterval(newIntervalId);
+        setLoadDesktop(true); // Trigger loading of Desktop component after completing the animation
       }
 
-      iteration += 1 / 3;
+      iteration += 1 / 1.8;
       setUpdatedLength(Math.floor(iteration));
     }, 30);
 
@@ -75,7 +68,7 @@ const HeroSection = () => {
     <>
       <div className="ui-wrapper" ref={ref}>
         <div className="Header">
-          <motion.h1 id="id" style={{ y: ytext }} onClick={handleMouseOver}>
+          <motion.h1 id="id" onClick={handleMouseOver}>
             {text.split("").map((letter, index) => (
               <span
                 key={index}
@@ -90,23 +83,11 @@ const HeroSection = () => {
               </span>
             ))}
           </motion.h1>
+          <h1 className="hover">CREATIVE WEB DEVELOPER</h1>
         </div>
         <div className="box">
-          <div className="main">
-            <motion.div
-              style={{ y: yBg }}
-              className="portfolio_box"
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ stiffness: 100, type: "spring", delay: 2 }}
-            >
-
-            <Bat />
-            </motion.div>
-            <div className="text">
-              
-            </div>
-          </div>
+            {/* <Buddha/> */}
+            {/* <Model/> */}
         </div>
       </div>
     </>

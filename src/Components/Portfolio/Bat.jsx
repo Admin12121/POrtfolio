@@ -11,7 +11,6 @@ const Bat = () => {
       });
     
       const yBg = useTransform(scrollYProgress, [1, 0], [0, 1]);
-      console.log(yBg)
   return (
     <>
       <motion.div className="bat" ref={ref} style={{opacity : yBg,transition: 'opacity .2s ease-in-out',}}></motion.div>
