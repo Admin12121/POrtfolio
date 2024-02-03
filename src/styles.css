@@ -28,7 +28,7 @@ body,
 body {
   overscroll-behavior-y: none;
   background: #25262A;
-  
+  overflow-x: hidden;
 }
 
 body #body_span
@@ -88,6 +88,15 @@ section{
 #canv{
   position: absolute;
   z-index: 2;
+  overflow: unset !important;
+}
+
+@media (max-width: 768px) {
+  #canv{
+    display: none;
+  }
+
+
 }
 
 a {

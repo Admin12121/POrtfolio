@@ -3,6 +3,7 @@ import Home from './Components/Pages/Home/Home'
 import './styles.css'
 import About from './Components/Pages/About/About'
 import { HoverImageLinks } from './Components/Pages/Projects/Project'
+import ReactForm from './Components/Pages/Forms/Form'
 
 const App = () => {
   
@@ -16,6 +17,7 @@ const App = () => {
       <About/>
     </section>
     <HoverImageLinks/>
+      <ReactForm/>
     </span>
     </>
   )

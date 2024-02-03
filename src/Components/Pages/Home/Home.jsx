@@ -27,8 +27,8 @@ const Home = () => {
           DEVELOP WITH A PASSON FOR CREATING INTUITIVE DIGITAL EXPERENCES
         </motion.div>
       </div>
-      <Canvas id="canv" antialias="true" alpha="true" camera={{ position: [10, -15, 25], fov: 10 }}>
-        <Model />
+      <Canvas id="canv" antialias="true" alpha="true" camera={{ position: [0, 0, 2], fov: 1 }}>
+        <Model  />
       </Canvas>
       <Background />
     </>

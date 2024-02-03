@@ -7,10 +7,10 @@ const Angel = (props) => {
   const { nodes, materials, animations } = useGLTF('/angel.glb')
   const { actions } = useAnimations(animations, group)
    useEffect(()=>{
-    actions.anim.reset().fadeIn(0.5).play();
+     actions.anim.reset().fadeIn(0.5).play();
     //  group.current.position.x = 1
-     group.current.position.y = -1.5
-     group.current.position.z = -1.5
+    //  group.current.position.y = -1.5
+    //  group.current.position.z = -1.5
   })
   // useEffect(() => void (actions.anim.reset().play().paused = true), [])
   // useFrame((state) => {actions.anim.time = actions.anim.getClip().duration * scroll.offset 

@@ -1,0 +1,182 @@
+#form{
+    font-weight: 'Lekton',sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    padding: 0 10%;
+}
+.form-react p{
+    margin:0px;
+}
+
+.form-react h1{
+    text-align:center;
+    color:#999;
+}
+
+.form-react h2{
+    font-size:15px;
+    margin:0 auto;   
+    padding:5px;
+    color:#333;
+    background:#ccc;
+    max-width:1000px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    text-shadow:0 1px 0 #fff;
+}
+
+.react-completed{
+    color:#444;
+    transition:color 500ms;
+    -webkit-transition:color 500ms
+}
+
+.form-react{ 
+    height: 500px; 
+    max-width: 815px;
+    padding:40px 40px 20px 40px;
+    margin:0 auto;
+    font-size:150%;
+    line-height:100%;
+    text-align:left;
+    color:#eee;
+    background:#22222255;
+    backdrop-filter:  blur(5px);
+    font-family: 'Lekton',sans-serif;
+    border-top-width:0;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    position: relative;
+    /* overflow-x: auto; */
+}
+
+
+.form_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    width: 100%;
+    color:#eee;
+    background:mediumslateblue;
+    padding: 10px 20px;
+}
+.form_header span{
+    font-size: 15px;
+}
+.form_header span:nth-child(1){
+    font-size: 10px;
+}
+
+.result-react{
+    max-width:1000px;
+    margin:30px auto;
+    color:green;
+}
+
+@media (max-width: 768px) {
+    #form{
+        padding: 0 5%;
+        overflow: hidden;
+    }
+    .form-react{
+        padding:  40px  20px;
+    }
+    .form_header{
+        padding: 10px;
+    }
+    .form_header span:nth-child(1){
+        letter-spacing: 3px;
+        font-size: 8px;
+    }
+}
+/* CORE CSS // Shouldn't be removed */
+.react-item.react-active .typed-cursor{
+    display:inline;
+}
+
+.react-item.react-completed .typed-cursor{
+    display:none;
+}
+
+.react-item{
+    display:none;
+}
+
+.react-item.react-completed,
+.react-item.react-active{
+    display:block;
+}
+.form_span{
+    display: block;
+    position: relative;
+    width: 100%;
+    font-size: 15px;
+    height: 100%;
+    overflow-y: scroll;
+}
+.form_span::-webkit-scrollbar {
+   display: none;
+}
+.react-input{
+    position: absolute;
+    height:40px;
+    color: #fff;
+    width:100%;
+    padding:0;
+    z-index: 5;
+    background: transparent;
+    border:none;
+    /*block to go to new line*/
+    display:block;
+    opacity: 0; 
+}
+
+.form_content span{
+    font-size: 20px;
+    color: mediumslateblue;
+}
+
+/* Flashing cursor copied from http://www.mattboldt.com/demos/typed-js/ */
+.typed-cursor{
+    opacity: 1;
+    font-weight: 100;
+    -webkit-animation: blink 0.9s infinite;
+    -moz-animation: blink 0.9s infinite;
+    -ms-animation: blink 0.9s infinite;
+    -o-animation: blink 0.9s infinite;
+    animation: blink 0.9s infinite;
+}
+@-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-ms-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-o-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}

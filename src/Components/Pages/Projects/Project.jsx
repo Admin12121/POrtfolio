@@ -6,9 +6,6 @@ import './Project.scss'
 export const HoverImageLinks = () => {
   return (
     <section className="project">
-      <span>
-      <h1>Projects</h1>
-      </span>
       <div className="project_wrapper">
         <Link
           heading="About"
