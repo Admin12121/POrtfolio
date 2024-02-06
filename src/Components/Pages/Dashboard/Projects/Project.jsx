@@ -2,42 +2,47 @@ import { useMotionValue, motion, useSpring, useTransform } from "framer-motion";
 import React, { useRef } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import './Project.scss'
+import { Link } from "react-router-dom";
+
+
+const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 
 export const HoverImageLinks = () => {
   return (
     <section className="project">
+      <div class="shadow-title">PROJECTS</div>
       <div className="project_wrapper">
-        <Link
+        <Links
           heading="About"
           subheading="Learn what we do here"
           imgSrc="/1.png"
-          href="#"
+          href="/model/yasmeen-tariq"
         />
-        <Link
+        <Links
           heading="Clients"
           subheading="We work with great people"
           imgSrc="/2.jpg"
           href="#"
         />
-        <Link
+        <Links
           heading="Portfolio"
           subheading="Our work speaks for itself"
           imgSrc="/3.jpeg"
           href="#"
         />
-        <Link
+        <Links
           heading="Careers"
           subheading="We want cool people"
           imgSrc="/4.jpg"
           href="#"
         />
-        <Link
+        <Links
           heading="Fun"
           subheading="Incase you're bored"
           imgSrc="/5.jpeg"
           href="#"
         />
-        <Link
+        <Links
           heading="Fun"
           subheading="Incase you're bored"
           imgSrc="/5.jpeg"
@@ -48,7 +53,7 @@ export const HoverImageLinks = () => {
   );
 };
 
-const Link = ({ heading, imgSrc, subheading, href }) => {
+const Links = ({ heading, imgSrc, subheading, href }) => {
   const projectref = useRef(null);
 
   const x = useMotionValue(0);
@@ -77,14 +82,14 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
   };
 
   return (
-    <motion.a
-      href={href}
+    <Link to={href}>
+    <motion.div
       ref={projectref}
       onMouseMove={handleMouseMove}
       initial="initial"
       whileHover="whileHover"
       className="project_card_wrapper"
-    >
+      >
       <div>
         <motion.span
           variants={{
@@ -97,13 +102,13 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
             delayChildren: 0.25,
           }}
           className="project_box_span_wrapper"
-        >
+          >
           {heading.split("").map((l, i) => (
             <motion.span
-              variants={{
-                initial: { x: 0 },
-                whileHover: { x: 16 },
-              }}
+            variants={{
+              initial: { x: 0 },
+              whileHover: { x: 16 },
+            }}
               transition={{ type: "spring" }}
               className="inline-block"
               key={i}
@@ -128,6 +133,7 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
           initial: { scale: 0, rotate: "-12.5deg" },
           whileHover: { scale: 1, rotate: "12.5deg" },
         }}
+        exit={{position:"absolute", top:"50%", left:"50%"}}
         transition={{ type: "spring" }}
         src={imgSrc}
         className="project_image_wrapper"
@@ -150,6 +156,7 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
       >
         <FiArrowRight className="project_icon" />
       </motion.div>
-    </motion.a>
+    </motion.div>
+        </Link>
   );
 };

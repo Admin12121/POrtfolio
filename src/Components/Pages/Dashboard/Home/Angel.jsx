@@ -6,6 +6,7 @@ const Angel = (props) => {
   const group = useRef()
   const { nodes, materials, animations } = useGLTF('/angel.glb')
   const { actions } = useAnimations(animations, group)
+  console.log(actions)
    useEffect(()=>{
      actions.anim.reset().fadeIn(0.5).play();
     //  group.current.position.x = 1

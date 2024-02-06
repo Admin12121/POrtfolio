@@ -2,9 +2,11 @@ import React from "react"
 import Model from "./Model"
 import Background from "./Background"
 import { Canvas } from "@react-three/fiber"
-import { motion } from "framer-motion"
-
+import { motion, useScroll, useTransform } from "framer-motion";
 const Home = () => {
+  const { scrollYProgress } = useScroll();
+  const x = useTransform(scrollYProgress, [0, 1], [0, -600]);
+  const xx = useTransform(scrollYProgress, [0, 1], [0, 600]);
   return (
     <>
       <div className="text-container">
@@ -16,8 +18,8 @@ const Home = () => {
           </a>
         </motion.div>
         <motion.div
-          initial={{ y: -500, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+          initial={{ x: 2000, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
           transition={{ type: "spring", duration: 2, delay: 1 }}
           className="Higllight">
           <h1>Creative Developer</h1>

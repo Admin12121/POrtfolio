@@ -1,24 +1,31 @@
 import React from 'react'
-import Home from './Components/Pages/Home/Home'
 import './styles.css'
-import About from './Components/Pages/About/About'
-import { HoverImageLinks } from './Components/Pages/Projects/Project'
-import ReactForm from './Components/Pages/Forms/Form'
 
+import { AnimatePresence } from "framer-motion";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Dashboard from './Components/Pages/Dashboard/Dashboard'
+import Model from './Components/Pages/Model/Model';
 const App = () => {
-  
+  const imageDetails = {
+    width: 524,
+    height: 650,
+  };
   return (
     <>
-    <section>
-      <Home/>
-    </section>
-    <span id='body_span'>
-    <section>
-      <About/>
-    </section>
-    <HoverImageLinks/>
-      <ReactForm/>
-    </span>
+     <Router>
+      <AnimatePresence mode='wait'>
+            <Routes>
+              <Route
+                index
+                element={<Dashboard imageDetails={imageDetails} />}
+              />
+              <Route
+                path='/model/:id'
+                element={<Model imageDetails={imageDetails} />}
+              />
+            </Routes>
+          </AnimatePresence>
+    </Router>
     </>
   )
 }

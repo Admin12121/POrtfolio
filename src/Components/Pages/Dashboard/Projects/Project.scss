@@ -2,8 +2,30 @@
     
     padding: 1rem;
     height: auto;
+    position: relative;
     display: flex;
     justify-content: center;
+    .shadow-title{
+        position: absolute;
+        top: 0;
+        margin-top: 30px;
+        left: 0px;
+        width: 10%;
+        text-align: left;
+        font-family: 'Muli', sans-serif;
+        -webkit-writing-mode: vertical-lr;
+        writing-mode: vertical-lr;
+        font-size: 10vw;
+        line-height: 1;
+        color: rgba(0, 0, 0, 0.1);
+        background: linear-gradient(90deg, rgba(200,200,200,0), rgba(200,200,200,0.35));
+        -webkit-background-clip: text;
+        font-weight: 900;
+        z-index: 1;
+        @media (max-width: 1300px) {
+            padding-top: 5 rem;
+        }
+    }
     .project_wrapper {
         max-width: 80%;
         width: 100%;
