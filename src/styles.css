@@ -33,8 +33,11 @@ body {
 .no-scroll {
   display: none;
 }
+
 body #body_span
 {
+  background-color: #25262A;
+  border-radius: 16px 16px 0 0;
   display: table;
   width: 100%;
   height: 100%;
@@ -91,6 +94,7 @@ section{
   position: absolute;
   z-index: 2;
   overflow: unset !important;
+  /* filter: invert(1); */
 }
 
 @media (max-width: 768px) {
@@ -117,12 +121,49 @@ filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.9));
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
-  top: 10%;
-  height: 80%;
+  top: 0%;
+  height: 100%;
   width: 100%;
   position: absolute;
-  left: 0;
   z-index: 1;
+}
+.scroll_down{
+  position: absolute;
+  background: transparent;
+  border-radius: 8px;
+  padding: 10px ;
+  color: #fff;
+  display: flex;
+  font-size: 15px;
+  font-weight: 200;
+  letter-spacing: .5px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  bottom: 3%;
+  left: 2%;
+}
+.scroll_down .arrow{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  padding: 8px 10px ;
+  border: .5px solid #ffffff4a ;
+}
+.date_span{
+  position: absolute;
+  background: transparent;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+  padding:13px 10px ;
+  color: #fff;
+  font-size: 12px;
+  display: flex;
+  border: .5px solid #ffffff4a ;
+  background-color: rgba(255, 255, 255, 0.1);
+  bottom: 3%;
+  right: 2%;
 }
 
 .Higllight{
@@ -137,7 +178,8 @@ filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.9));
 
 .Higllight h1{
   position: relative;
-  color: #ffffff;
+  color: #ffff;
+  /* color: #0f0f0f; */
 }
 .popup{
   position: absolute !important;
@@ -145,7 +187,7 @@ filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.9));
   z-index: 9 !important;
   color: transparent !important;
   text-stroke: 2px #dcdcdc;
-  -webkit-text-stroke: 2px #dcdcdc;
+  -webkit-text-stroke: 2px #dddddd;
 }
 
 .title{

@@ -8,10 +8,10 @@ import ReactForm from './Forms/Form'
 const Dashboard = () => {
   return (
     <>
-    <section>
-      <Home/>
+    <section >
+      <Home />
     </section>
-    <span id='body_span'>
+    <span id='body_span' style={{position:"relative", zIndex:2}}>
     <section>
       <About/>
     </section>

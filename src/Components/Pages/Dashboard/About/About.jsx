@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import "./About.scss"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
+import Skill from "./Skill"
 const About = () => {
   const [userData, setUserData] = useState(null)
   useEffect(() => {
@@ -20,6 +21,7 @@ const About = () => {
 
     fetchData()
   }, [])
+  
   const Data = [
     {
       title: "About me"
@@ -32,9 +34,7 @@ const About = () => {
       icon: <FaLinkedin />
     },
     {
-      img: "",
-      title: "",
-      desc: ""
+      comp: <Skill/>
     },
     {
       img: userData ? userData.avatar_url : "",
@@ -88,9 +88,10 @@ const About = () => {
     <>
       <div className="About_Section">
         <div id="cards" onMouseMove={handleMouseMove}>
-          {Data.map(({ img, title, desc, followers, icon, platform }, index) => (
+          {Data.map(({ img, title, desc, followers, icon, platform, comp }, index) => (
             <div className="card" key={index}>
               <div className="card-content">
+                {comp && comp}
                 {img && (
                   <div className="card-image">
                     <span>
@@ -117,8 +118,8 @@ const About = () => {
                         been fueled by a love for coding and a deep understanding of technologies like JavaScript, React, Next.js, RESTful APIs, Python, Django,
                         and SCSS. Coding isn't just a job for me; it's a passion. I find joy in crafting elegant code and translating ideas into functional,
                         beautiful websites and web apps. My commitment to staying updated with the latest trends and technologies ensures that my work is at the
-                        forefront of innovation.
-                      </p>
+                        forefront of innovation.Outside of the coding realm, I channel my creativity into making animated videos and indulging in the art of drawing.
+                        These activities not only serve as a creative outlet but also contribute to keeping my mind fresh and open to new ideas. </p>
                       <div className="card-info-title"></div>
                     </div>
                   </div>
