@@ -1,29 +1,12 @@
 import React, { useEffect, useRef } from 'react';
-// import { useFrame } from '@react-three/fiber';
-import { useGLTF, useAnimations, useScroll } from '@react-three/drei';
-
+import { useGLTF, useAnimations} from '@react-three/drei';
 const Angel = (props) => {
   const group = useRef()
   const { nodes, materials, animations } = useGLTF('/angel.glb')
   const { actions } = useAnimations(animations, group)
-  console.log(actions)
-   useEffect(()=>{
+    useEffect(()=>{
      actions.anim.reset().fadeIn(0.5).play();
-    //  group.current.position.x = 1
-    //  group.current.position.y = -1.5
-    //  group.current.position.z = -1.5
-  })
-  // useEffect(() => void (actions.anim.reset().play().paused = true), [])
-  // useFrame((state) => {actions.anim.time = actions.anim.getClip().duration * scroll.offset 
-  //   const t = state.clock.getElapsedTime()
-  //   const maxValue = 0.94
-  //   group.current.position.x = -(scroll.offset / 2.5 >= 0.2698437967810459 ?   maxValue - (scroll.offset) : (scroll.offset / 2.5));
-  //   console.log(group.current.position.x)
-  //   group.current.scale.x = 30 - (scroll.offset * 15 ) 
-  //   group.current.scale.y = 30 - (scroll.offset * 15 ) 
-  //   group.current.scale.z = 30 - (scroll.offset * 15 ) 
-  // } )
-
+    })
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Sketchfab_Scene">

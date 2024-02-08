@@ -3,32 +3,39 @@ import React, { useRef } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import './Project.scss'
 import { Link } from "react-router-dom";
-
+import { SiNextdotjs,SiDjango } from "react-icons/si";
+import { FaLock,FaReact, } from "react-icons/fa";
+import { ImUnlocked } from "react-icons/im";
 
 const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 
 export const HoverImageLinks = () => {
   return (
-    <section className="project">
-      <div class="shadow-title">PROJECTS</div>
+    <section id="projects" className="project">
+      <div className="shadow-title">PROJECTS</div>
       <div className="project_wrapper">
         <Links
-          heading="About"
+          heading="|About"
           subheading="Learn what we do here"
           imgSrc="/1.png"
           href="/model/yasmeen-tariq"
-        />
+          react={<FaReact/>}
+          python={<SiDjango/>}
+          />
         <Links
-          heading="Clients"
+          heading="|Clients"
           subheading="We work with great people"
           imgSrc="/2.jpg"
           href="#"
+          python={<SiDjango/>}
+          lock={true}
         />
         <Links
-          heading="Portfolio"
+          heading="|Portfolio"
           subheading="Our work speaks for itself"
           imgSrc="/3.jpeg"
           href="#"
+          nextjs={<SiNextdotjs/>}
         />
         <Links
           heading="Careers"
@@ -53,7 +60,7 @@ export const HoverImageLinks = () => {
   );
 };
 
-const Links = ({ heading, imgSrc, subheading, href }) => {
+const Links = ({ heading, imgSrc, subheading, href , react, python , nextjs, lock}) => {
   const projectref = useRef(null);
 
   const x = useMotionValue(0);
@@ -90,7 +97,7 @@ const Links = ({ heading, imgSrc, subheading, href }) => {
       whileHover="whileHover"
       className="project_card_wrapper"
       >
-      <div>
+      <div style={{display:"flex", alignItems:'center' , gap:"20px"}}>
         <motion.span
           variants={{
             initial: { x: 0 },
@@ -103,6 +110,7 @@ const Links = ({ heading, imgSrc, subheading, href }) => {
           }}
           className="project_box_span_wrapper"
           >
+          { react || python || nextjs ? <span className="tech">{react} {python} {nextjs}</span> : ""}
           {heading.split("").map((l, i) => (
             <motion.span
             variants={{
@@ -118,7 +126,7 @@ const Links = ({ heading, imgSrc, subheading, href }) => {
           ))}
         </motion.span>
         <span className="project_box_header">
-          {subheading}
+        —— {subheading}
         </span>
       </div>
 
@@ -154,7 +162,16 @@ const Links = ({ heading, imgSrc, subheading, href }) => {
         transition={{ type: "spring" }}
         className="project_icon_wrapper"
       >
-        <FiArrowRight className="project_icon" />
+         {lock ?   
+         <span className="lock">
+           <FaLock/> contact for details
+         </span> 
+         : 
+         <span className="lock">
+           <ImUnlocked/> view more details
+         </span> 
+        //  <FiArrowRight className="project_icon" />
+        }
       </motion.div>
     </motion.div>
         </Link>

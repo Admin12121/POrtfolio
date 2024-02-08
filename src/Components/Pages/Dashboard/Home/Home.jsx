@@ -1,4 +1,4 @@
-import React from "react"
+import React,{useState, useEffect} from "react"
 import Model from "./Model"
 import Background from "./Background"
 import { Canvas } from "@react-three/fiber"
@@ -7,6 +7,22 @@ import { FaArrowDown } from "react-icons/fa6";
 import Navbar from "../Navbar/Navbar";
 const Home = () => {
   const currentYear = new Date().getFullYear();
+  
+  const [screen, setScreen] = useState(window.innerWidth)
+  const [display, setDisplay] = useState(true)
+  useEffect(()=>{
+    const updateScreenWidth = () => {
+      setScreen(window.innerWidth);
+        if(screen<700){
+          setDisplay(false)
+        }
+    };
+    window.addEventListener("resize", updateScreenWidth);
+    updateScreenWidth();
+    return () => {
+      window.removeEventListener("resize", updateScreenWidth);
+    };
+  },[])
   const { scrollYProgress } = useScroll();
   const x = useTransform(scrollYProgress, [0, 1], [0, -600]);
   const xx = useTransform(scrollYProgress, [0, 1], [0, 600]);
@@ -14,14 +30,12 @@ const Home = () => {
     <span style={{position:"fixed",zIndex:1, width: "100%", height:"100%"}}>
     <Navbar/>
       <div className="text-container">
-        <motion.div
-          initial={{ x: 2000, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ type: "spring", duration: 2, delay: 1 }}
-          className="Higllight">
-          <h1>Creative Developer</h1>
-          <h1 className="popup">Creative Developer</h1>
-        </motion.div>
+        <div class="ttcontainer">
+          <div class="marquee">
+            {/* <div class="marquee__inner first"><span>CREATIVE</span><span>FULL</span><span>STACK</span><span>DEVELOPER</span></div> */}
+            <div class="marquee__inner second"><span>CREATIVE DEVELOPER</span><span>CREATIVE DEVELOPER</span><span>CREATIVE DEVELOPER</span><span>CREATIVE DEVELOPER</span></div>
+          </div>
+       </div>
         <span className="scroll_down">
           <span className="arrow">
             <motion.span 
@@ -41,9 +55,11 @@ const Home = () => {
             </span> SCROLL DOWN</span>
         <span className="date_span">©️ {currentYear}</span>
       </div>
-      <Canvas id="canv" antialias="true" alpha="true" camera={{ position: [0, 0, 2], fov: 1 }}>
-        <Model  />
-      </Canvas>
+      {display && 
+            <Canvas id="canv" antialias="true" alpha="true" camera={{ position: [0, 0, 2], fov: 1 }}>
+            <Model  />
+          </Canvas>
+      }
       <Background />
     </span>
   )

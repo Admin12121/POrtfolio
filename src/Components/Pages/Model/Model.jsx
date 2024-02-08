@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { motion, useViewportScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import './Model.scss'
 
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
@@ -43,7 +43,7 @@ const letter = {
 };
 
 const Model = ({ imageDetails }) => {
-  const { scrollYProgress } = useViewportScroll();
+  const { scrollYProgress } = useScroll();
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
 
   const [canScroll, setCanScroll] = useState(false);

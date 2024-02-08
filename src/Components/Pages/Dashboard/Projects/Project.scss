@@ -1,5 +1,4 @@
   .project {
-    
     padding: 1rem;
     height: auto;
     position: relative;
@@ -10,12 +9,12 @@
         top: 0;
         margin-top: 30px;
         left: 0px;
-        width: 10%;
+        width: 5%;
         text-align: left;
         font-family: 'Muli', sans-serif;
         -webkit-writing-mode: vertical-lr;
         writing-mode: vertical-lr;
-        font-size: 10vw;
+        font-size: 5vw;
         line-height: 1;
         color: rgba(0, 0, 0, 0.1);
         background: linear-gradient(90deg, rgba(200,200,200,0), rgba(200,200,200,0.35));
@@ -32,7 +31,7 @@
         .project_card_wrapper {
             display: flex;
             position: relative;
-            height: 150px;
+            height: 120px;
             padding-top: 1rem;
             padding-bottom: 1rem;
             justify-content: space-between;
@@ -51,21 +50,29 @@
                 display: block;
                 position: relative;
                 z-index: 10;
-                font-size: 2.25rem;
+                font-size: 2.5rem;
                 line-height: 2.5rem;
-                font-weight: 700;
-                // padding-left: 1rem;
+                font-weight: 400;
                 transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
                 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
                 transition-duration: 300ms;
                 transition-duration: 500ms;
-
+                .tech{
+                    position: relative;
+                    border-radius: 14px;
+                    padding: 10px;
+                    background: #000;
+                    display: inline-flex;
+                    gap: 10px;
+                    font-size: 2rem;
+                    text-align: center;
+                }
                 .inline-block {
                     display: inline-block;
                 }
 
                 @media (min-width: 768px) {
-                    font-size: 3.75rem;
+                    font-size: 3rem;
                     line-height: 1;
                 }
 
@@ -105,10 +112,25 @@
                 position: relative;
                 z-index: 10;
                 padding: 1rem;
+                text-align: center;
+                display: flex;
+                gap: 10px;
+                .lock{
+                    width: 200px;
+                    height: 50px;
+                    border-radius: 12px;
+                    padding: 5px 10%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    background: #35363a;
+                    border: 1px solid #ffffff53;
 
+                }
                 .project_icon {
                     font-size: 3rem;
                     line-height: 1;
+                    rotate: -30deg;
                 }
             }
 
