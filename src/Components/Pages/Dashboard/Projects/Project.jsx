@@ -6,13 +6,27 @@ import { Link } from "react-router-dom";
 import { SiNextdotjs,SiDjango } from "react-icons/si";
 import { FaLock,FaReact, } from "react-icons/fa";
 import { ImUnlocked } from "react-icons/im";
+import Line from "../../../Models/Line";
+
 
 const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 
 export const HoverImageLinks = () => {
+  
   return (
     <section id="projects" className="project">
-      <div className="shadow-title">PROJECTS</div>
+      <div className="shadow-title">
+        <h1>⤵ PROJECTS</h1>
+      <Line/>
+        <span className="project_title">
+          <span className="project_hover">
+           <p>view all projects <span><FiArrowRight/></span></p>
+          </span>
+          <span>
+            <p><span>Here are some selected projects</span> that showcase my passion for creating web experiences, products & skills.</p>
+          </span>
+        </span>
+      </div>
       <div className="project_wrapper">
         <Links
           heading="|About"

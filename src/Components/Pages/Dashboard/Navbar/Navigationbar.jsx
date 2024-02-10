@@ -32,7 +32,7 @@ const Navigationbar = ({variants,isInView}) => {
             </a>
             </div>
             <div className="links">
-                <a href="#cards">About</a>
+                <a href="#about">About</a>
                 <a href="#projects">Projects</a>
                 <a href="#form">Contact</a>
             </div>
