@@ -1,0 +1,45 @@
+.roundedButton{
+    border-radius: 3em;
+    border: 1px solid rgb(136, 136, 136);
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    flex-direction: column;
+    
+    p{
+        line-height: 10px;
+        position: relative;
+        z-index: 1;
+        font-size: 15px !important;
+        margin: 0;
+        letter-spacing: 0px !important;
+        transition: display 0.5s linear;
+        &:nth-child(1){
+            left: -5px;
+        }
+        &:nth-child(2){
+            left: 5px;
+        }
+    }
+    span{
+        transition: display 0.5s linear;
+        display: none !important;
+        width: unset !important;
+        height: unset !important;
+    }
+    &:hover{
+        cursor: crosshair;
+        p{
+            display: none;
+        }
+        span{
+            display: block !important;
+            transform: rotate(-135deg)
+        }
+    }
+}

@@ -7,7 +7,7 @@ import { SiNextdotjs,SiDjango } from "react-icons/si";
 import { FaLock,FaReact, } from "react-icons/fa";
 import { ImUnlocked } from "react-icons/im";
 import Line from "../../../Models/Line";
-
+import Rounded from "../../../Models/Magnetic";
 
 const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 
@@ -20,7 +20,13 @@ export const HoverImageLinks = () => {
       <Line/>
         <span className="project_title">
           <span className="project_hover">
-           <p>view all projects <span><FiArrowRight/></span></p>
+              <Rounded >
+                  <p>View All </p>
+                  <p>Projects</p>
+                  <span>
+                  <svg width="3rem" height="3rem" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.2338 12.28L14.7538 20.8V0.239998H11.3538V20.76L2.87375 12.28L0.59375 14.56L13.0738 27L25.5138 14.56L23.2338 12.28Z" fill="white"></path></svg>
+                  </span>
+              </Rounded>
           </span>
           <span>
             <p><span>Here are some selected projects</span> that showcase my passion for creating web experiences, products & skills.</p>

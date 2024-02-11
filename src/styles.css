@@ -25,7 +25,8 @@
 
 html,
 body,
-#root {  scroll-behavior: smooth;
+#root {  
+  scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   width: 100%;
   height: 100%;
@@ -52,7 +53,6 @@ body #body_span
   color: #fff;
   background-color: rgba(255, 255, 255, 0.181);
   border-radius: 16px;
-  cursor: pointer;
   position: relative;
 }
 
@@ -61,10 +61,10 @@ body #body_span
 }
 .body_container{
   backdrop-filter: blur(25px);
-  background-color: #25262ae2;
+  /* background-color: #000000c8; */
+  background-color: #000000c8;
   border-radius: inherit;
   inset: 2px;
-  /* position: absolute; */
   z-index: 5;
   height: 100%;
   width: 100%;

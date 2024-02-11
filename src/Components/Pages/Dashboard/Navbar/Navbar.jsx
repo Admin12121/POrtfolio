@@ -23,6 +23,12 @@ const Navbar = () => {
               </span>
               <p>Creative & Passonated FullStack Developer</p>
             </div>
+            <div class="button-container-1">
+              <span class="mas">Available for FreeLance</span>
+              <button type="button" className="button-3"  name="Hover">
+                Available for FreeLance
+              </button>
+            </div>
           </div>
         </div>
       </div>

@@ -30,10 +30,10 @@ const Home = () => {
     <span style={{position:"fixed",zIndex:1, width: "100%", height:"100%"}}>
     <Navbar/>
       <div className="text-container">
-        <div class="ttcontainer">
-          <div class="marquee">
-            {/* <div class="marquee__inner first"><span>CREATIVE</span><span>FULL</span><span>STACK</span><span>DEVELOPER</span></div> */}
-            <div class="marquee__inner second"><span>CREATIVE DEVELOPER</span><span>CREATIVE DEVELOPER</span><span>CREATIVE DEVELOPER</span><span>CREATIVE DEVELOPER</span></div>
+        <div className="ttcontainer">
+          <div className="marquee">
+            {/* <div className="marquee__inner first"><span>CREATIVE</span><span>FULL</span><span>STACK</span><span>DEVELOPER</span></div> */}
+            <div className="marquee__inner second"><span>CREATIVE DEVELOPER</span><span>CREATIVE DEVELOPER</span><span>CREATIVE DEVELOPER</span><span>CREATIVE DEVELOPER</span></div>
           </div>
        </div>
         <span className="scroll_down">

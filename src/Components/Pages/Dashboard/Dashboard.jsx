@@ -1,6 +1,5 @@
 import React, { useRef } from 'react'
 import Home from './Home/Home'
-import About from './About/About'
 import { HoverImageLinks } from './Projects/Project'
 import ReactForm from './Forms/Form'
 import Navigationbar from './Navbar/Navigationbar'
@@ -33,12 +32,11 @@ const Dashboard = () => {
     <>
     <section >
       <Home />
+     <div className="bg"></div>
     </section>
     <span id='body_span' className='body_wrapper' ref={ref}  style={{position:"relative", zIndex:2}}>
-     <div class="bg"></div>
       <Navigationbar variants={variants} isInView={isInView} />
      <motion.div className='body_container' >
-       {/* <About/> */}
        <Aboutme/>
        <HoverImageLinks/>
        <ReactForm/>

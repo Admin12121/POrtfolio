@@ -5,12 +5,20 @@
     justify-content: center;
     height: 100vh;
     width: 100%;
-    padding: 0 10%;
+    /* padding: 0 10%; */
 }
 .form-react p{
     margin:0px;
 }
-
+.form_border{
+    width: 95%;
+    height: 90%;
+    border-radius: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #292929;
+}
 .form-react h1{
     text-align:center;
     color:#999;
