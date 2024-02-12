@@ -69,8 +69,8 @@ const Aboutme = () => {
             <img src="orginal.png" alt="" />
             <div className='sliderContainer'>
               <div ref={slider} className='slider'>
-                <p ref={firstText}>Freelance Developer -</p>
-                <p ref={secondText}>Freelance Developer -</p>
+                <p ref={firstText}>Vicky Tajpuriya -</p>
+                <p ref={secondText}>Vicky Tajpuriya -</p>
               </div>
             </div>
           </span>

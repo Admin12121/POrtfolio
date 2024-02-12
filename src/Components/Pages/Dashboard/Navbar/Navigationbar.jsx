@@ -2,7 +2,9 @@ import React from 'react'
 import './Navigation.scss'
 import { FaRegChessPawn } from "react-icons/fa6";
 import {motion} from 'framer-motion' 
+import {Link} from "react-router-dom"
 const Navigationbar = ({variants,isInView}) => {
+
     const handleMouseMove = (e) => {
         for (const card of document.getElementsByClassName("navigationbar")) {
           const rect = card.getBoundingClientRect(),
@@ -25,16 +27,16 @@ const Navigationbar = ({variants,isInView}) => {
       <div className="navigationbar" onMouseMove={handleMouseMove}>
         <div className="navigation_wrapper">
         <div className="logo">
-            <a href="#">
+            <Link to="/">
               <span>
                 <FaRegChessPawn />
               </span>
-            </a>
+            </Link>
             </div>
             <div className="links">
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#form">Contact</a>
+                <Link to="/about">About</Link>
+                <Link to="/project">Projects</Link>
+                <Link to="/form">Contact</Link>
             </div>
         </div>
       </div>

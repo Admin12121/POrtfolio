@@ -160,7 +160,7 @@ const ReactiveForm = () => {
   const isInView = useInView(ref, {margin: "-100px"})
   return (
     <motion.div  id="form"  >
-      <motion.div ref={ref} className="form_border" variants={variants} initial="initial" animate={isInView ? isInView && "animate" : {width: '200%', height: '200%', opacity:0,  transition:{
+      <motion.div ref={ref} className="form_border" variants={variants} initial="initial" animate={isInView ? isInView && "animate" : {width: '100%', height: '100%', opacity:0,  transition:{
       type:"spring",
       stiffness:100,
       duration:1,

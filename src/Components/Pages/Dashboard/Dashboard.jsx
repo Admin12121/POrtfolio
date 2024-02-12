@@ -6,6 +6,7 @@ import Navigationbar from './Navbar/Navigationbar'
 
 import {motion, useInView} from 'framer-motion'
 import Aboutme from './About/Aboutme'
+import Curve from '../../Models/Page_Tra/Tran'
 
 
 const variants = {
@@ -30,18 +31,22 @@ const Dashboard = () => {
 
   return (
     <>
-    <section >
-      <Home />
-     <div className="bg"></div>
-    </section>
-    <span id='body_span' className='body_wrapper' ref={ref}  style={{position:"relative", zIndex:2}}>
-      <Navigationbar variants={variants} isInView={isInView} />
-     <motion.div className='body_container' >
-       <Aboutme/>
-       <HoverImageLinks/>
-       <ReactForm/>
-     </motion.div>
-    </span> 
+    <Curve>
+      <span style={{background: '#25262A', display: "block", width: '100%', height: '100%'}}>
+        <section >
+          <Home />
+        <div className="bg"></div>
+        </section>
+        <span id='body_span' className='body_wrapper' ref={ref}  style={{position:"relative", zIndex:2}}>
+          <Navigationbar variants={variants} isInView={isInView} />
+        <motion.div className='body_container' >
+          <Aboutme/>
+          <HoverImageLinks/>
+          <ReactForm/>
+        </motion.div>
+        </span> 
+      </span>
+    </Curve>
     </>
   )
 }
