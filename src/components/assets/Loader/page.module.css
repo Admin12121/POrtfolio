@@ -1,0 +1,16 @@
+
+
+.threedloader{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  position: relative;
+  z-index: 1;
+}
+
+.threedloader svg{
+  height: 100%;
+  width: 100%;
+}
