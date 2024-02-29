@@ -7,6 +7,8 @@
   padding: 10px 3%;
   z-index: 5;
   color: #fff;
+  display: flex;
+  gap: 20px;
 
   .nav {
     width: 100%;
@@ -148,6 +150,24 @@
 
 
 
+    }
+  }
+  .menu_wrapper{
+    background: transparent;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    padding: 10px;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: relative;
+    span{
+      background: mediumslateblue;
+      width: 70px;
+      height: 35px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }

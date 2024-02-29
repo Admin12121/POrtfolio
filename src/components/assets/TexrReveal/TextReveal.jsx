@@ -9,7 +9,7 @@ const TextReveal = ({children,style}) => {
   return (
     <div ref={ref} className="wrapper">
       <div  className="line" style={style}>
-        <motion.span initial={{y:150, skewY:5}} animate={isInView ? {  y:0, skewY:0} : {y:150, skewY:5}} transition={{duration:.6}}>{children}</motion.span>
+        <motion.span initial={{y:150, skewY:5}} animate={isInView ? {  y:0, skewY:0} : {y:150, skewY:5}} transition={{duration:.5}}>{children}</motion.span>
       </div>
     </div>
   );

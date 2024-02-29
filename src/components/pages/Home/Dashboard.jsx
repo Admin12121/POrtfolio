@@ -35,7 +35,8 @@ const Dashboard = ({display}) => {
       const lenis = new Lenis({
         lerp: 0.05,
         duration:0.4,
-        wheelMultiplier: 3
+        wheelMultiplier: 3,
+        infinite:false
       })
       function raf(time) {
         lenis.raf(time)

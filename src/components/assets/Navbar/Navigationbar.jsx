@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { FaRegChessPawn } from "react-icons/fa6";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link,useLocation } from "react-router-dom";
 import "./style.navigation.scss";
 import { RollingText } from "../../Animation/Line_Button/Line";
 const Navigationbar = ({ variants, isInView }) => {
@@ -62,23 +62,23 @@ const Navigationbar = ({ variants, isInView }) => {
           <div className="navigationbar" onMouseMove={handleMouseMove}>
             <div className="navigation_wrapper">
               <div className="logo">
-                <Link to="/">
-                  <span>
-                  <svg
-                    version="1.0"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="188.000000pt"
-                    height="176.000000pt"
-                    viewBox="0 0 188.000000 176.000000"
-                    preserveAspectRatio="xMidYMid meet"
+              <Link to="/">
+                <span>
+                <svg
+                  version="1.0"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="188.000000pt"
+                  height="176.000000pt"
+                  viewBox="0 0 188.000000 176.000000"
+                  preserveAspectRatio="xMidYMid meet"
+                >
+                  <g
+                    transform="translate(0.000000,176.000000) scale(0.100000,-0.100000)"
+                    fill="#fff"
+                    stroke="none"
                   >
-                    <g
-                      transform="translate(0.000000,176.000000) scale(0.100000,-0.100000)"
-                      fill="#fff"
-                      stroke="none"
-                    >
-                      <path
-                        d="M660 1491 c-55 -29 -75 -64 -75 -129 0 -31 4 -72 8 -89 8 -29 6 -33
+                    <path
+                      d="M660 1491 c-55 -29 -75 -64 -75 -129 0 -31 4 -72 8 -89 8 -29 6 -33
 -11 -33 -32 0 -109 -76 -138 -138 -27 -57 -64 -180 -64 -214 0 -26 -42 -23
 -68 5 -12 13 -22 35 -22 50 0 72 103 202 224 283 31 20 54 39 52 41 -11 11
 -170 -83 -225 -134 -109 -98 -143 -187 -100 -262 25 -45 66 -74 127 -91 l39
@@ -107,11 +107,11 @@ l7 -47 -48 -21 c-69 -31 -188 -60 -246 -60 l-49 0 6 33 c9 46 78 186 111 226
 -95 81 -107 145 -121 267 -31 279 55 8 131 0 176 -18z m271 -159 c80 -59 191
 -186 191 -219 0 -10 -126 -28 -197 -28 -91 0 -137 12 -170 43 -28 26 -28 40
 -2 98 19 43 104 140 122 140 5 0 30 -15 56 -34z"
-                      />
-                    </g>
-                  </svg>
-                  </span>
-                </Link>
+                    />
+                  </g>
+                </svg>
+                </span>
+              </Link>
               </div>
               <div className="links">
                 <Link to="/about">

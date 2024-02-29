@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.navigation.scss";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const Navbar = (props) => {
+  const [wid, setWid] = useState (false)
   const handleMouseMove = (e) => {
     for (const card of document.getElementsByClassName("nav")) {
       const rect = card.getBoundingClientRect(),
@@ -14,7 +15,6 @@ const Navbar = (props) => {
       card.style.setProperty("--mouse-y", `${y}px`);
     }
   };
-
   return (
     <>
       <motion.div
@@ -86,6 +86,9 @@ l7 -47 -48 -21 c-69 -31 -188 -60 -246 -60 l-49 0 6 33 c9 46 78 186 111 226
             </Link>
           </div>
         </div>
+        {/* <motion.div onClick={()=>{setWid(prev => !prev)}} animate={{width: wid ? 500 : 100, height: wid ? 500 : "100%"}} transition={{duration:1, type:"spring"}} className="menu_wrapper">
+          <span>Menu</span>
+        </motion.div> */}
       </motion.div>
     </>
   );

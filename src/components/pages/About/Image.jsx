@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const Image = () => {
   return (
     <>
-      <motion.div initial={{height:0, width:0, top:200}} animate={{top:0,width:"90vw", height:"80vh"}} transition={{duration:1,}} className="intro">
+      <motion.div initial={{height:0, width:0, top:200}} animate={{top:0,width:"90vw", height:"80vh"}} transition={{duration:1,delay:.1}} className="intro">
         <div className="corner tl">
           <div className="bloop"></div>
           <svg
